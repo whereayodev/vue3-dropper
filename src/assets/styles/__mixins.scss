@@ -1,0 +1,37 @@
+@mixin text-style-main() {
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  line-height: 120%;
+  text-decoration: none;
+  text-transform: none;
+}
+
+@mixin animate($duration, $property) {
+  transition: $property $duration ease-in-out;
+  * {
+    transition: $property $duration ease-in-out;
+  }
+}
+
+@mixin user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin bg-blur() {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}

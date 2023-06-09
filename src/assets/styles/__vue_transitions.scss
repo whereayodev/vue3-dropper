@@ -1,0 +1,27 @@
+.slide-down-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-down-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-down-enter-from,
+.slide-down-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.slide-up-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-up-leave-active {
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
