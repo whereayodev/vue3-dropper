@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { type Ref, ref, watch } from 'vue'
-import { onClickOutside, useElementVisibility } from '@vueuse/core'
+import { type Ref, ref, watch, onMounted } from 'vue'
+import { onClickOutside, useElementVisibility, useColorMode } from '@vueuse/core'
 
 interface Props {
   label: string
   top?: boolean
   bottom?: boolean
   width?: string
-  theme?: 'dark' | 'light'
+  theme?: 'dark' | 'light' | 'auto'
 }
 
 const props = defineProps<Props>()
@@ -15,6 +15,9 @@ const props = defineProps<Props>()
 const opened: Ref<boolean> = ref(false)
 const root: Ref<HTMLElement | null> = ref(null)
 const visible = useElementVisibility(root)
+const { system } = useColorMode()
+
+const current_theme: Ref<'dark' | 'light'> = ref('dark')
 
 onClickOutside(root, () => {
   opened.value = false
@@ -28,12 +31,28 @@ const transitionName = (): string => {
   }
 }
 
+onMounted(() => {
+  if (props.theme == undefined || props.theme == 'auto') {
+    current_theme.value = system.value
+  } else {
+    current_theme.value = props.theme
+  }
+})
+
 watch(
   visible,
   (newValue, oldValue) => {
     if (!newValue && oldValue) {
       opened.value = false
     }
+  },
+  { immediate: true }
+)
+
+watch(
+  system,
+  (newValue) => {
+    current_theme.value = newValue
   },
   { immediate: true }
 )
@@ -47,8 +66,8 @@ watch(
       opened: opened,
       top: top,
       bottom: bottom,
-      'dark-theme': theme === 'dark',
-      'light-theme': theme === 'light'
+      'dark-theme': current_theme === 'dark',
+      'light-theme': current_theme === 'light'
     }"
     :style="{
       width: width

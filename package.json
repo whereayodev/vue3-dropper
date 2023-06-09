@@ -1,6 +1,7 @@
 {
   "name": "vue3-dropper",
   "description": "A simple dropdown vue3 library",
+  "author": "Maksym A.",
   "main": "./dist/drop-down.umd.js",
   "module": "./dist/drop-down.js",
   "types": "./dist/index.d.ts",

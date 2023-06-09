@@ -3,8 +3,8 @@ import DropDown from './components/DropDown.vue'
 </script>
 
 <template>
-  <main>
-    <DropDown top label="Label" theme="dark" width="100px">
+  <main class="container col align justify center">
+    <DropDown top label="Label" theme="auto" width="100px">
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>
