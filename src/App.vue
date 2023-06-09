@@ -4,7 +4,7 @@ import DropDown from './components/DropDown.vue'
 
 <template>
   <main>
-    <DropDown bottom label="Label" theme="dark" width="100px">
+    <DropDown top label="Label" theme="dark" width="100px">
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>

@@ -12,15 +12,15 @@ interface Props {
 
 const props = defineProps<Props>()
 
-const opened = ref<boolean>(false)
-
+const opened: Ref<boolean> = ref(false)
 const root: Ref<HTMLElement | null> = ref(null)
-
 const visible = useElementVisibility(root)
 
-onClickOutside(root, () => (opened.value = false))
+onClickOutside(root, () => {
+  opened.value = false
+})
 
-const transitionName = () => {
+const transitionName = (): string => {
   if (props.bottom) {
     return 'slide-down'
   } else {
@@ -31,13 +31,14 @@ const transitionName = () => {
 watch(
   visible,
   (newValue, oldValue) => {
-    if (!newValue && oldValue) opened.value = false
+    if (!newValue && oldValue) {
+      opened.value = false
+    }
   },
-  {
-    immediate: true
-  }
+  { immediate: true }
 )
 </script>
+
 <template>
   <div
     ref="root"
@@ -46,8 +47,8 @@ watch(
       opened: opened,
       top: top,
       bottom: bottom,
-      'dark-theme': theme == 'dark',
-      'light-theme': theme == 'light'
+      'dark-theme': theme === 'dark',
+      'light-theme': theme === 'light'
     }"
     :style="{
       width: width
@@ -72,6 +73,7 @@ watch(
     </transition>
   </div>
 </template>
+
 <style lang="scss">
 @import '../assets/styles/_mixins';
 @import '../assets/styles/_variables';
@@ -161,7 +163,7 @@ watch(
     }
   }
 
-  // Apperance
+  // Appearance
 
   &.dark-theme {
     --fill-color: #{$color-dark-theme-fill};
