@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import DropDown from './components/DropDown.vue'
+import DropDown from '../src/components/DropDown.vue'
 </script>
 
 <template>
   <main class="container col align justify center">
-    <DropDown top label="Label" theme="auto" width="100px">
+    <DropDown top label="Label" theme="light" width="100px">
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>
       <span class="list-item">Kurwa</span>

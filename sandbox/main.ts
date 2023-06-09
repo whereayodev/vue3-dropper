@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
 import '@/assets/styles/preview.scss'
-import App from './App.vue'
+import App from '../sandbox/Preview.vue'
 
 createApp(App).mount('#app')
