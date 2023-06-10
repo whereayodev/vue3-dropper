@@ -4,8 +4,8 @@
 
 1. Import component and styles
 
-`import { DropDown } from 'vue3-dropper'`
-`import 'vue3-dropper/dist/base.css'`
+`import { DropDown } from 'vue3-dropper'
+import 'vue3-dropper/dist/base.css'`
 
 2. Insert DropDown component
 
