@@ -5,6 +5,9 @@
   "main": "./dist/drop-down.umd.js",
   "module": "./dist/drop-down.es.js",
   "types": "./dist/types/index.d.ts",
+  "publishConfig": {
+    "@whereayodev:registry": "https://npm.pkg.github.com"
+  },
   "exports": {
     ".": {
       "import": "./dist/drop-down.es.js",
