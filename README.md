@@ -29,4 +29,4 @@
  - `top` (optional): A boolean value indicating whether the dropdown should appear on top of the button. Default value is false.
  - `bottom` (optional): A boolean value indicating whether the dropdown should appear below the button. Default value is false.
  - `width` (optional): A string representing the width of the component. This can be any valid CSS width value. Default value is undefined.
-`theme` (optional): A string indicating the theme of the component. Possible values are 'dark', 'light', or 'auto'. Default value is 'dark'.
+ - `theme` (optional): A string indicating the theme of the component. Possible values are 'dark', 'light', or 'auto'. Default value is 'dark'.
