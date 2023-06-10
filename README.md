@@ -12,11 +12,7 @@ import 'vue3-dropper/dist/base.css';
 2. Insert DropDown component
 
 ```
-<DropDown
-    :bottom="true"
-    :label="Label"
-    theme="auto"
->
+<DropDown :bottom="true" :label="Label" theme="auto">
     <span>any tag item</span>
     <a>any tag item</a>
 </DropDown>
