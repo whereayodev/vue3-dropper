@@ -10,6 +10,19 @@
 
 ## How to use:
 
+#### Installation
+
+
+```shell
+# Using yarn
+
+yarn add vue3-dropper
+
+# Using npm
+
+npm install vue3-dropper
+```
+
 1. Import component and styles
 
 ```js
