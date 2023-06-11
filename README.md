@@ -23,6 +23,8 @@ yarn add vue3-dropper
 npm install vue3-dropper
 ```
 
+#### Usage
+
 1. Import component and styles
 
 ```js
