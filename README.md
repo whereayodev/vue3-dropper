@@ -2,11 +2,11 @@
 
 ## Links:
 
-[Github](https://github.com/whereayodev/vue3-dropper)
+[🐈‍⬛ Github](https://github.com/whereayodev/vue3-dropper)
 
-[Preview](https://dropper-preview.vercel.app)
+[👀 Preview](https://dropper-preview.vercel.app)
 
-[Buy me a coffee](https://www.buymeacoffee.com/whereayodev)
+[☕️ Buy me a coffee](https://www.buymeacoffee.com/whereayodev)
 
 ## How to use:
 
